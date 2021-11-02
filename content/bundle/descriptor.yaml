@@ -1,5 +1,5 @@
 code: entando-hub-content-bundle
-description: This is the Entando HUB content bundle
+description: Entando HUB content bundle
 components:
   widgets:
     - widgets/eh-app-descriptor.yaml
