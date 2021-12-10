@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "entandoaks-f2e6"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "entandoaks-f2e6"
+  template:
+    metadata:
+      labels:
+        app: "entandoaks-f2e6"
+    spec:
+      containers:
+        - name: "entandoaks-f2e6"
+          image: "entandoregistry.azurecr.io/entandoaks"
+          ports:
+          - containerPort: 8081
