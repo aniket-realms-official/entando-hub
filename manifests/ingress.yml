@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "entandoaks-f2e6"
+    labels:
+        app: "entandoaks-f2e6"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: entando-aksaf2d-entandoaks-f2e6.fd97bfa25caf4227953b.southeastasia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "entandoaks-f2e6"
+                servicePort: 8081
